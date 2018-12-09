@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+//render tabs for home, resume and contact 
 @IonicPage()
 @Component({
   template: `

@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-
+<!--Render every section as an ion list item with sectionSelected on click listener-->
   <ion-list>
     <button ion-item *ngFor="let section of sections" (click)="sectionSelected(section)">
       {{ section.title }}

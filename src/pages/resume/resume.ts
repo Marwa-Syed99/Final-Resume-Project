@@ -21,7 +21,7 @@ export class ResumePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResumePage');
   }
-
+//sections in resume with title and page name to navigate to
   sections = [
     {
       title: 'Profile',
@@ -44,7 +44,7 @@ export class ResumePage {
       pageName: 'ProjectsPage'
     }
   ]
-
+//navigate to sections page name
   sectionSelected(section) {
     this.navCtrl.push(section.pageName)
   }

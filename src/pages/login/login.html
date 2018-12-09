@@ -15,12 +15,16 @@
 </ion-header>
 
 <ion-content padding>
+  <!-- image-->
     <ion-img style="width: 100%; height: 50%; align-content: center;" src="../../assets/imgs/marwa.png"></ion-img> <!--image for home page-->
 
 
         <h2 text-center>Welcome to my Resume application. To access the contents, please register below.</h2> <!-- Home page intro text -->
         <br>
+        <!--show error message if any-->
         <p *ngIf="errorMessage" style="color: red;">{{errorMessage}}</p>
+
+        <!-- Input elements binds to email and password-->
         <ion-item>
             <ion-label>Email:</ion-label>
             <ion-input [(ngModel)]="email"></ion-input>
@@ -30,6 +34,7 @@
               <ion-input type="password" [(ngModel)]="password"></ion-input>
           </ion-item>
         <br>
+        <!--buttons call the register and log in functions with email and password-->
           <div text-center>
             <button round ion-button (click)='register(email, password)'>Register</button> <!-- Added round to change button style-->
             <button round ion-button (click)='login(email, password)'>Login</button> <!-- Added round to change button style-->
