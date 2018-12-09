@@ -20,6 +20,7 @@
 
         <h2 text-center>Welcome to my Resume application. To access the contents, please register below.</h2> <!-- Home page intro text -->
         <br>
+        <p *ngIf="errorMessage" style="color: red;">{{errorMessage}}</p>
         <ion-item>
             <ion-label>Email:</ion-label>
             <ion-input [(ngModel)]="email"></ion-input>

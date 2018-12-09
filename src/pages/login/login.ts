@@ -20,6 +20,8 @@ export class LoginPage {
     public angularFireAuth: AngularFireAuth) {
   }
 
+  errorMessage = null;
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
@@ -27,12 +29,16 @@ export class LoginPage {
   register(email, password) {
     this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password).then((res) => {
       this.navCtrl.setRoot('TabsPage', {email});
+    }).catch(error => {
+      this.errorMessage = error.message
     });
   }
   
   login(email, password) {
     this.angularFireAuth.auth.signInWithEmailAndPassword(email, password).then((user) => {
       this.navCtrl.setRoot('TabsPage', {email});
+    }).catch(error => {
+      this.errorMessage = error.message
     });
   }
 
